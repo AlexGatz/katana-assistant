@@ -65,7 +65,7 @@ print (classes)
 
 # Use pickle to load in the pre-trained model
 global graph
-graph = tf.get_default_graph()
+graph = tf.compat.v1.get_default_graph() # Updated for tensorflow 2.0
 
 with open(f'katana-assistant-model.pkl', 'rb') as f:
     model = pickle.load(f)
